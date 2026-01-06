@@ -51,7 +51,7 @@ const ProductCard = ({ product, addToCart }) => {
       <div className="product-image-wrapper">
         <div className="product-image">
           <img
-            src={`/${product.image}`}
+            src={`${product.image}`}
             alt={product.name}
             loading="lazy"
           />

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// Importamos HashRouter em vez de BrowserRouter
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Home from "./pages/home/Home";
@@ -9,7 +10,6 @@ import Cart from "./pages/cart/Cart";
 function App() {
   const [cartItems, setCartItems] = useState([]);
 
-  // Adicionar ao carrinho (Lógica imutável correta)
   const addToCart = (product) => {
     setCartItems(prevItems => {
       const existing = prevItems.find(item => item.id === product.id);
@@ -22,12 +22,10 @@ function App() {
     });
   };
 
-  // Remover do carrinho
   const removeFromCart = (productId) => {
     setCartItems(prevItems => prevItems.filter(item => item.id !== productId));
   };
 
-  // Atualizar quantidade (ESSENCIAL para o Cart.jsx funcionar)
   const updateQuantity = (productId, newQuantity) => {
     setCartItems(prevItems =>
       prevItems.map(item =>
@@ -36,16 +34,16 @@ function App() {
     );
   };
 
-  // Cálculo do total de peças para a sacolinha
   const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
-    <BrowserRouter>
-      {/* Passando o total exato para o Header */}
+    /* Usamos o Router (HashRouter) aqui */
+    <Router>
       <Header cartCount={totalItems} />
 
       <main style={{ minHeight: '80vh' }}>
         <Routes>
+          {/* No HashRouter, os paths continuam iguais, o React cuida do resto */}
           <Route path="/" element={<Home addToCart={addToCart} />} />
           <Route path="/product/:id" element={<Product addToCart={addToCart} />} />
           <Route
@@ -62,7 +60,7 @@ function App() {
       </main>
 
       <Footer />
-    </BrowserRouter>
+    </Router>
   );
 }
 

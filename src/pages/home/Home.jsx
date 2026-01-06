@@ -66,7 +66,7 @@ const Home = ({ addToCart }) => {
           <div className="collections-grid">
             {collections.map((col, i) => (
               <a key={i} href="#produtos" className="collection-card">
-                <img src={`/${col.img}`} alt={col.title} className="collection-img" />
+                <img src={`${col.img}`} alt={col.title} className="collection-img" />
                 <div className="collection-overlay">
                   <h3 className="collection-title">{col.title}</h3>
                   <span className="collection-link">Ver Peças</span>
@@ -108,7 +108,7 @@ const Home = ({ addToCart }) => {
                 <div className="frame-corner tl"></div>
                 <div className="frame-corner br"></div>
                 <div className="visual-img-container">
-                  <img src="/manifesto.jpg" alt="Manifesto SØLENE" className="manifesto-img" />
+                  <img src="manifesto.jpg" alt="Manifesto SØLENE" className="manifesto-img" />
                 </div>
               </div>
             </div>
