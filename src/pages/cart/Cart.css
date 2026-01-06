@@ -1,0 +1,293 @@
+/* CONTAINER BASE */
+.cart-page-new {
+  padding: 40px 0 100px;
+  background-color: #fdfcf9;
+  min-height: 80vh;
+}
+
+.cart-page-header {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.cart-page-header h1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.item-count {
+  color: #888;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* GRID PRINCIPAL */
+.cart-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+/* CARDS DE PRODUTO */
+.cart-item-card {
+  display: flex;
+  gap: 20px;
+  padding: 25px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.item-image-container {
+  width: 110px;
+  height: 150px;
+  background: #f5f5f5;
+  flex-shrink: 0;
+}
+
+.item-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-info-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.item-name {
+  font-size: 1.2rem;
+  margin: 0 0 5px 0;
+  color: #111;
+}
+
+.item-meta {
+  font-size: 0.85rem;
+  color: #777;
+  display: flex;
+  gap: 15px;
+}
+
+.btn-remove-minimal {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  font-size: 0.75rem;
+  color: #999;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+/* SELETOR DE QUANTIDADE */
+.qty-selector {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  padding: 4px;
+}
+
+.qty-selector button {
+  background: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.qty-selector span {
+  padding: 0 15px;
+  font-weight: 500;
+}
+
+.item-price-total {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* RESUMO DO PEDIDO */
+.summary-box {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #f0f0f0;
+  position: sticky;
+  top: 100px;
+}
+
+.summary-title {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.free-shipping-text {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+/* BARRA DE PROGRESSO FRETE */
+.shipping-progress-bar {
+  margin: 20px 0;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.shipping-progress-bar p {
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.progress-bg {
+  height: 4px;
+  background: #e0e0e0;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #111;
+  transition: width 0.4s ease;
+}
+
+.summary-divider {
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+.summary-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.total-amount {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #000;
+}
+
+/* BOTÃO PREMIUM */
+.btn-checkout-premium {
+  width: 100%;
+  padding: 18px;
+  background: #000;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.btn-checkout-premium:hover {
+  opacity: 0.85;
+}
+
+.security-badges {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.security-badges p {
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+/* ESTILO CARRINHO VAZIO */
+.cart-empty-wrapper {
+  padding: 120px 0;
+  text-align: center;
+}
+
+.empty-label {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.empty-title {
+  font-size: 4rem;
+  margin: 10px 0;
+}
+
+.empty-text {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.btn-shop-now {
+  display: inline-block;
+  padding: 15px 40px;
+  border: 1px solid #111;
+  text-decoration: none;
+  color: #111;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+}
+
+.btn-shop-now:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* RESPONSIVIDADE */
+@media (min-width: 1024px) {
+  .cart-grid {
+    grid-template-columns: 1fr 400px;
+    align-items: start;
+  }
+}
+
+@media (max-width: 600px) {
+  .cart-page-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .item-image-container {
+    width: 90px;
+    height: 120px;
+  }
+
+  .item-name {
+    font-size: 1rem;
+  }
+
+  .empty-title {
+    font-size: 2.5rem;
+  }
+}
