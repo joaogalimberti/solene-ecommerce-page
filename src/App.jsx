@@ -1,5 +1,4 @@
 import { useState } from "react";
-// Importamos HashRouter em vez de BrowserRouter
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
@@ -37,13 +36,13 @@ function App() {
   const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
-    /* Usamos o Router (HashRouter) aqui */
+    /* Adicionamos o basename para o Router saber que o site começa após /solene-ecommerce-page/ */
     <Router>
       <Header cartCount={totalItems} />
 
       <main style={{ minHeight: '80vh' }}>
         <Routes>
-          {/* No HashRouter, os paths continuam iguais, o React cuida do resto */}
+          {/* O path continua "/" porque o Router já entende o basename da URL */}
           <Route path="/" element={<Home addToCart={addToCart} />} />
           <Route path="/product/:id" element={<Product addToCart={addToCart} />} />
           <Route
@@ -56,6 +55,8 @@ function App() {
               />
             }
           />
+          {/* Rota de fallback: se o usuário digitar algo errado, volta para a Home */}
+          <Route path="*" element={<Home addToCart={addToCart} />} />
         </Routes>
       </main>
 
