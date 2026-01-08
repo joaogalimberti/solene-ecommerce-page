@@ -662,7 +662,7 @@ clean and modern presentation"
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Cormorant+Garamond&size=22&duration=3000&pause=1000&color=D4AF37&center=true&vCenter=true&width=800&lines=✦+Built+with+passion+for+modern+web+development+✦;⚛️+React+%2B+Vite+%2B+AI-Powered+Design+⚡;🎨+Where+luxury+meets+cutting-edge+technology+🚀" alt="Footer" />
 
-**Crafted with ✦ by [João Galimberti](https://github.com/joaogalimberti) | 2024**
+**Crafted with ✦ by [João Galimberti](https://github.com/joaogalimberti) | 2026**
 
 *From DOM manipulation to production-ready e-commerce*
 
